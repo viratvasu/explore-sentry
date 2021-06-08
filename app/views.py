@@ -13,7 +13,7 @@ def rendrTodoDetail(request,id):
         context['todo']=todo_obj
     except Exception as e:
         capture_exception(e)
-    return render(request,'todoDetail.html')
+    return render(request,'todoDetail.html',context)
 def errorEndPoint(request):
     raise Exception("You will get error if you visit this one")
     return render(request,'todoDetail.html')
